@@ -1,5 +1,11 @@
 #!/bin/zsh
 
+# Check if 'python' command exists; current installations typically are invoked with python3
+if ! command -v python &> /dev/null; then
+    # If 'python' command does not exist, alias it to 'python3'
+    alias python='python3'
+fi
+
 # Start timing
 SCRIPT_START_TIME=$SECONDS
 
